@@ -1,5 +1,6 @@
 import React from 'react'
 import GridBox from '../GridBox/GridBox'
+import './Grid.css'
 
 function Grid() {
   return (
