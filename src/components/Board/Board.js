@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Square from '../Square/Square'
+import calculateWinner from '../utils/calculateWinner'
 
 // A `Board` component that renders a 3x3 grid of `Square` components.
 export class Board1 extends React.Component {
@@ -50,7 +51,7 @@ export class Board1 extends React.Component {
 }
 
 // A `Board` component that renders a 3x3 grid of `Square` components.
-const Board = (props) => {
+const Board = () => {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [xIsNext, setXIsNext] = useState(true);
 
@@ -66,8 +67,10 @@ const Board = (props) => {
   const renderSquare = (i) => {
     return (
       <Square
+        key={i}
         value={squares[i]}
         onClick={() => handleClick(i)}
+        isGameOver={calculateWinner(squares)}
       />
     );
   }
