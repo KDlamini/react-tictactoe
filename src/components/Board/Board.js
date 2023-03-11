@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Square from '../Square/Square'
 import Header from './Header'
+import WinnerAlert from '../Notifications/WinnerAlert'
 import calculateWinner from '../utils/calculateWinner'
 
 // A `Board` component that renders a 3x3 grid of `Square` components.
@@ -43,6 +44,7 @@ const Board = () => {
     <article className='board-container'>
       <Header />
       <div className='board'>{board}</div>
+      <WinnerAlert />
     </article>
   );
 }
