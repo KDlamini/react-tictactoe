@@ -30,6 +30,10 @@ const Board = () => {
     );
   }
 
+  const clearBoard = () => {
+    setSquares(Array(9).fill(null))
+  }
+
   const boardSize = 3;
   let board = [];
 
@@ -45,7 +49,7 @@ const Board = () => {
     <article className='board-container'>
       <Header />
       <div className='board'>{board}</div>
-      <WinnerAlert isWinner={isWinner} />
+      <WinnerAlert isWinner={isWinner} clearBoard={clearBoard} />
     </article>
   );
 }
