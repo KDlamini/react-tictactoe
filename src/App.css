@@ -1,14 +1,90 @@
 .App {
   text-align: center;
+  color: #ffffff;
+}
+
+.App {
+  background-color: #282c34;
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  margin: 0;
+  padding: 0;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  border: 2px solid #282c34;
+  height: 15vh;
+
+}
+
+.game-container {
+  display: flex;
+  height: 84vh;
+}
+
+.board-container {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  border-top: 1px solid #373b46;
+}
+
+.board-header {
+  flex: 1;
+  border-bottom: 1px solid #373b46;
+}
+
+.board-header p {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-top: 0;
+}
+
+.board {
+  flex: 6;
+}
+
+.display {
+  flex: 1;
+  background-color: #2e343d;
+  border: 1px solid #373b46;
+}
+
+.board,
+.display {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+
+.display p {
+  text-align: left;
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+  font-weight: 500;
+  border: 1px solid #373b46;
+}
+
+.green {
+  color: #299932;
+}
+
+.orange {
+  color: #a9c024;
+}
+
+.board-row {
+  padding: 0;
+  margin: 0;
 }
