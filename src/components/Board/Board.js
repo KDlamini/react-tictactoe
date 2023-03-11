@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Square from '../Square/Square'
+import Header from './Header'
 import calculateWinner from '../utils/calculateWinner'
 
 // A `Board` component that renders a 3x3 grid of `Square` components.
@@ -88,16 +89,7 @@ const Board = () => {
 
   return (
     <article className='board-container'>
-      <div className="board-header">
-        <h3>
-          Player 1:
-          <span className="green"> X</span> 
-          &nbsp; &nbsp; &nbsp; 
-          Player 2:
-          <span className="orange"> O</span>
-        </h3>
-        <p>Get 3 marks in a row (up, down, across, or diagonally) to win the game.</p>
-      </div>
+      <Header />
       <div className='board'>{board}</div>
     </article>
   );
