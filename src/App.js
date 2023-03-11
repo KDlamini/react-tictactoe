@@ -1,14 +1,15 @@
 import './App.css';
-import Grid from './components/Grid/Grid';
+import Board from './components/Board/Board';
 
 function App() {
   return (
-    <div className="App">
+    <section className="App">
       <header className="App-header">
         <h1>React TicTacToe</h1>
-        <Grid />
+
+        <Board />
       </header>
-    </div>
+    </section>
   );
 }
 
