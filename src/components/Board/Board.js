@@ -87,7 +87,7 @@ const Board = () => {
   }
 
   return (
-    <div>{board}</div>
+    <article className='board'>{board}</article>
   );
 }
 
