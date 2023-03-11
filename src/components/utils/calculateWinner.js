@@ -19,9 +19,9 @@ export function calculateWinner(squares) {
     const combination = squares[line[0]] + squares[line[1]] + squares[line[2]];
 
     if (combination === 'XXX') {
-      result = "Winner: X";
+      result = "X";
     } else if (combination === 'OOO') {
-      result = "Winner: O";
+      result = "O";
     } else if (isGameOver(squares)) {
       result = "Draw";
     }

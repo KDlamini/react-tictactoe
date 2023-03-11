@@ -9,7 +9,7 @@ class Square extends React.Component {
       <button
         className={`square ${token === "X" ? "green": "orange"}`}
         onClick={() => this.props.onClick()}
-        disabled={this.props.isGameOver ? true : false}
+        disabled={this.props.isWinner ? true : false}
       >
         {token}
       </button>

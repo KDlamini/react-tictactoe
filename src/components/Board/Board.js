@@ -8,6 +8,7 @@ import calculateWinner from '../utils/calculateWinner'
 const Board = () => {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [xIsNext, setXIsNext] = useState(true);
+  let isWinner = calculateWinner(squares);
 
   // Keep track of the game state (i.e., which squares have been clicked and by whom) in its state.
   const handleClick = (i) => {
@@ -24,7 +25,7 @@ const Board = () => {
         key={i}
         value={squares[i]}
         onClick={() => handleClick(i)}
-        isGameOver={calculateWinner(squares)}
+        isWinner={isWinner}
       />
     );
   }
@@ -44,7 +45,7 @@ const Board = () => {
     <article className='board-container'>
       <Header />
       <div className='board'>{board}</div>
-      <WinnerAlert />
+      <WinnerAlert isWinner={isWinner} />
     </article>
   );
 }
