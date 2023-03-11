@@ -6,7 +6,7 @@ function App() {
   return (
     <section className="App">
       <header className="App-header">
-        <h1>React TicTacToe</h1>
+        <h1>TIC TAC TOE</h1>
       </header>
       <section className='game-container'>
         <Board />
