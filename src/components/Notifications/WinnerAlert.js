@@ -1,6 +1,7 @@
 import React from 'react'
+import NewGame from '../Board/NewGame'
 
-function WinnerAlert({ isWinner }) {
+function WinnerAlert({ isWinner, clearBoard }) {
   let message = null;
 
   if (isWinner === "X" || isWinner === "O") {
@@ -9,6 +10,7 @@ function WinnerAlert({ isWinner }) {
         <h4>Congratulations !!!🎆</h4>
         <p>🎉 Player {isWinner} 🥳</p>
         <p>You Won!!!🥇</p>
+        <NewGame clearBoard={clearBoard}/>
       </div>
     );
   } else if (isWinner === "Draw") {
@@ -16,6 +18,7 @@ function WinnerAlert({ isWinner }) {
       <div className='winner-alert'>
         <h4>Game Over !!!</h4>
         <p>It's a draw.</p>
+        <NewGame clearBoard={clearBoard}/>
       </div>
     );
   }
